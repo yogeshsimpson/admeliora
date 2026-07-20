@@ -230,6 +230,7 @@ em { font-style: italic; }
    ============================================================ */
 .sec-head { max-width: 760px; margin-bottom: clamp(2.4rem, 5vw, 3.6rem); }
 .sec-head.center { margin-inline: auto; text-align: center; }
+.sec-head--tight { margin-bottom: 1.2rem; }
 .sec-head p { margin-top: 1.1rem; }
 .sec-head.center p { margin-inline: auto; }
 
@@ -276,10 +277,18 @@ em { font-style: italic; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split.align-top { align-items: start; }
 .split.reverse .split-media { order: -1; }
+.split-66 { display: grid; grid-template-columns: 2fr 3fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
 .split-media { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; background: linear-gradient(150deg, var(--sage-tint), var(--paper-3)); display:grid; place-items:center; box-shadow: var(--shadow-md); }
 .split-media.tall { aspect-ratio: 3/4; }
 .ph-note { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); text-align:center; padding: 1rem; }
 .split-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.definition { border-left: 2px solid var(--line); padding-left: clamp(1.4rem, 3vw, 2rem); margin-top: 0.3rem; }
+.definition--left { border-left: none; border-right: 2px solid var(--line); padding-left: 0; padding-right: clamp(1.4rem, 3vw, 2rem); }
+.definition-term { font-family: var(--font-display); font-style: italic; font-size: clamp(1.5rem, 2.4vw, 1.9rem); color: var(--ink); line-height: 1.2; }
+.definition-pos { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-top: 0.5rem; margin-bottom: 1.2rem; }
+.definition-body { font-size: 0.98rem; line-height: 1.65; color: var(--ink-soft); }
+.definition-body + .definition-body { margin-top: 1rem; }
 
 .prose h2 { margin-bottom: 1.2rem; }
 .prose p + p { margin-top: 1.15rem; }
@@ -431,6 +440,7 @@ em { font-style: italic; }
   .hero .portrait { max-width: 380px; margin-inline: auto; order: -1; }
   .split { grid-template-columns: 1fr; }
   .split.reverse .split-media { order: 0; }
+  .split-66 { grid-template-columns: 1fr; }
   .split-media, .portrait { max-width: 420px; margin-inline: auto; width: 100%; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; }
