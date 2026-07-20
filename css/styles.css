@@ -188,7 +188,7 @@ em { font-style: italic; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .hero h1 { margin-bottom: 1.6rem; }
 .hero h1 .accent { color: var(--poppy); font-style: italic; }
-.hero .lede { margin-bottom: 2.2rem; max-width: 30ch; }
+.hero .lede { margin-bottom: 2.2rem; max-width: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 .hero-meta { margin-top: 2.6rem; display: flex; gap: 2.2rem; flex-wrap: wrap; }
 .hero-meta .stat { }
@@ -218,7 +218,7 @@ em { font-style: italic; }
    Logo / trust strip
    ============================================================ */
 .trust { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); padding-block: 2.4rem; }
-.trust-label { text-align: center; font-size: 0.76rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.6rem; font-weight: 600; }
+.trust-label { text-align: center; font-size: 0.76rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.6rem; font-weight: 600; max-width: none; margin-inline: auto; }
 .trust-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(1.6rem, 5vw, 3.4rem); }
 .trust-row span { font-family: var(--font-display); font-size: clamp(1.05rem, 1.8vw, 1.4rem); color: var(--ink-soft); opacity: 0.78; letter-spacing: 0.01em; }
 .trust-logo { height: clamp(26px, 3.4vw, 36px); width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: 0.55; transition: opacity .25s var(--ease), filter .25s var(--ease); }
