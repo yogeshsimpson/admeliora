@@ -204,6 +204,7 @@ em { font-style: italic; }
 .portrait.placeholder { display: grid; place-items: center; }
 .portrait .ph-label { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); text-align: center; padding: 1rem; }
 .portrait .ph-poppy { width: 64px; opacity: 0.85; margin-bottom: 0.8rem; }
+.portrait-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Topo decoration */
 .topo {
@@ -220,6 +221,9 @@ em { font-style: italic; }
 .trust-label { text-align: center; font-size: 0.76rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.6rem; font-weight: 600; }
 .trust-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(1.6rem, 5vw, 3.4rem); }
 .trust-row span { font-family: var(--font-display); font-size: clamp(1.05rem, 1.8vw, 1.4rem); color: var(--ink-soft); opacity: 0.78; letter-spacing: 0.01em; }
+.trust-logo { height: clamp(26px, 3.4vw, 36px); width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: 0.55; transition: opacity .25s var(--ease), filter .25s var(--ease); }
+.trust-logo--mark { height: clamp(40px, 5vw, 52px); }
+.trust-logo:hover { opacity: 0.9; filter: grayscale(0.4); }
 
 /* ============================================================
    Section heading block
@@ -263,6 +267,8 @@ em { font-style: italic; }
 .t-card blockquote { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.35; margin: 0.6rem 0 1.4rem; flex: 1; }
 .t-card cite { font-style: normal; font-size: 0.86rem; color: var(--ink-soft); line-height: 1.4; }
 .t-card cite b { display: block; color: var(--ink); font-weight: 600; }
+.t-person { display: flex; align-items: center; gap: 0.8rem; }
+.t-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 
 /* ============================================================
    Split / about feature
@@ -272,6 +278,7 @@ em { font-style: italic; }
 .split-media { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; background: linear-gradient(150deg, var(--sage-tint), var(--paper-3)); display:grid; place-items:center; box-shadow: var(--shadow-md); }
 .split-media.tall { aspect-ratio: 3/4; }
 .ph-note { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); text-align:center; padding: 1rem; }
+.split-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .prose p + p { margin-top: 1.15rem; }
 .prose p { color: var(--ink); }

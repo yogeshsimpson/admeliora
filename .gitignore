@@ -12,3 +12,4 @@ server.js
 # Client-confidential source material (keep out of public repo)
 Content Strategy/
 Website Assets/
+.vercel
