@@ -13,3 +13,8 @@ server.js
 Content Strategy/
 Website Assets/
 .vercel
+
+# Large source/original assets (not needed by the static site)
+*.psd
+assets/Clean in MT_full/
+assets/Clean in MT_small/
