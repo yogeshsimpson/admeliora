@@ -101,22 +101,22 @@
     </div>
     <div class="download-grid" data-reveal data-reveal-delay="1">
       <article class="dl-card">
-        <span class="tag">Free microclass</span>
-        <h3>The Powerful Questions Pyramid</h3>
-        <p>A short video on how the right question opens up new perspectives, and helps you generate solutions you've never seen before. About five minutes.</p>
-        <a class="btn btn--sage" href="#">Watch the microclass</a>
+        <span class="tag">Free guide</span>
+        <h3>Clean Language for Leading Change</h3>
+        <p>Six non-leading questions that surface how your team actually feels about change, before resistance hardens. Includes a sample conversation and the traps to avoid.</p>
+        <button class="btn btn--sage" type="button" data-download="assets/downloads/clean-language-for-leading-change.pdf" data-title="Clean Language for Leading Change" data-noun="guide">Get the guide</button>
       </article>
       <article class="dl-card">
-        <span class="tag">Free download</span>
-        <h3>Who's Got the Monkey?</h3>
-        <p>The classic 1974 HBR article on delegation, still one of the sharpest tools out there for leaders drowning in other people's problems.</p>
-        <a class="btn btn--sage" href="#">Get the article</a>
+        <span class="tag">Free worksheet</span>
+        <h3>90-Day Clean Leadership Goals Worksheet</h3>
+        <p>A guided, fill-in worksheet that uses your own words and metaphors to set a 90-day leadership goal, name what needs to happen, and mark your 30/60/90-day checkpoints.</p>
+        <button class="btn btn--sage" type="button" data-download="assets/downloads/90-day-clean-leadership-goals-worksheet.pdf" data-title="90-Day Clean Leadership Goals Worksheet" data-noun="worksheet">Get the worksheet</button>
       </article>
       <article class="dl-card">
-        <span class="tag">Coming soon</span>
-        <h3>Clean Questions, a starter set</h3>
-        <p>A one-page set of Clean Language questions to try with your team, a taste of the work behind Clean in Montana.</p>
-        <a class="btn btn--outline" href="contact.html#consult">Tell me you want it</a>
+        <span class="tag">Free guide</span>
+        <h3>Five Habits of Highly Effective Leaders</h3>
+        <p>The five small, repeatable habits Erin sees most in the leaders she coaches, each with a simple "try this week" step you can start on right away.</p>
+        <button class="btn btn--sage" type="button" data-download="assets/downloads/five-habits-of-highly-effective-leaders.pdf" data-title="Five Habits of Highly Effective Leaders" data-noun="guide">Get the guide</button>
       </article>
     </div>
   </div>
@@ -167,6 +167,38 @@
     </div>
   </div>
 </section>
+
+<!-- ===== Lead-magnet email gate ===== -->
+<div class="lead-modal" id="leadModal" hidden>
+  <div class="lead-modal__overlay" data-lead-close></div>
+  <div class="lead-modal__panel" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+    <button class="lead-modal__close" type="button" aria-label="Close" data-lead-close>&times;</button>
+
+    <div id="leadFormWrap">
+      <span class="eyebrow eyebrow--sage">Free download</span>
+      <h3 id="leadModalTitle">Get the guide</h3>
+      <p class="lead-modal__lede">Add your name and email and it's yours. No spam, just the occasional note on coaching and change.</p>
+      <form id="leadForm">
+        <div class="field">
+          <label for="leadName">Your name</label>
+          <input id="leadName" name="name" type="text" placeholder="First and last" required>
+        </div>
+        <div class="field">
+          <label for="leadEmail">Email</label>
+          <input id="leadEmail" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+        <button class="btn btn--primary" type="submit">Send it to me <span class="arrow">→</span></button>
+      </form>
+    </div>
+
+    <div id="leadThanks" hidden>
+      <span class="eyebrow eyebrow--sage">All yours</span>
+      <h3>Thank you.</h3>
+      <p class="lead-modal__lede" id="leadThanksMsg">Your download is ready.</p>
+      <a class="btn btn--primary" id="leadDownload" href="#" target="_blank" rel="noopener">Download now <span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
 
 </main>
 

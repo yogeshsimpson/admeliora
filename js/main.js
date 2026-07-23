@@ -25,4 +25,57 @@
   } else {
     els.forEach(function (el) { el.classList.add('in'); });
   }
+
+  // Lead-magnet email gate (Resources page)
+  var leadModal = document.getElementById('leadModal');
+  if (leadModal) {
+    var leadForm = document.getElementById('leadForm');
+    var leadFormWrap = document.getElementById('leadFormWrap');
+    var leadThanks = document.getElementById('leadThanks');
+    var leadTitle = document.getElementById('leadModalTitle');
+    var leadThanksMsg = document.getElementById('leadThanksMsg');
+    var leadDownload = document.getElementById('leadDownload');
+    var leadName = document.getElementById('leadName');
+    var lastTrigger = null;
+
+    var openLead = function (trigger) {
+      lastTrigger = trigger;
+      leadTitle.textContent = trigger.getAttribute('data-title') || 'Get the guide';
+      leadDownload.setAttribute('href', trigger.getAttribute('data-download'));
+      leadThanks.hidden = true;
+      leadFormWrap.hidden = false;
+      leadForm.reset();
+      leadModal.hidden = false;
+      document.body.classList.add('lead-open');
+      setTimeout(function () { leadName.focus(); }, 30);
+    };
+
+    var closeLead = function () {
+      leadModal.hidden = true;
+      document.body.classList.remove('lead-open');
+      if (lastTrigger) { lastTrigger.focus(); }
+    };
+
+    document.querySelectorAll('[data-download]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openLead(btn); });
+    });
+    leadModal.querySelectorAll('[data-lead-close]').forEach(function (el) {
+      el.addEventListener('click', closeLead);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !leadModal.hidden) { closeLead(); }
+    });
+
+    leadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // TODO before launch: POST { name, email } to Erin's email list / CRM here
+      // (e.g. Mailchimp, Kit/ConvertKit, or a form service). Right now the form
+      // only reveals the download; the email is not captured anywhere yet.
+      var noun = (lastTrigger && lastTrigger.getAttribute('data-noun')) || 'download';
+      leadThanksMsg.textContent = 'Your ' + noun + ' is ready. Click below and it opens in a new tab.';
+      leadFormWrap.hidden = true;
+      leadThanks.hidden = false;
+      setTimeout(function () { leadDownload.focus(); }, 30);
+    });
+  }
 })();
