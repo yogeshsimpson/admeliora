@@ -68,9 +68,11 @@
 
     leadForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      // TODO before launch: POST { name, email } to Erin's email list / CRM here
-      // (e.g. Mailchimp, Kit/ConvertKit, or a form service). Right now the form
-      // only reveals the download; the email is not captured anywhere yet.
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: leadName.value, email: document.getElementById('leadEmail').value })
+      }).catch(function () { /* download still unlocks even if the Kit call fails */ });
       var noun = (lastTrigger && lastTrigger.getAttribute('data-noun')) || 'download';
       leadThanksMsg.textContent = 'Your ' + noun + ' is ready. Click below and it opens in a new tab.';
       leadFormWrap.hidden = true;

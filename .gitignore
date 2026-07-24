@@ -4,6 +4,8 @@
 # Dependencies / build
 node_modules/
 .vercel/
+.env
+.env.*
 
 # Local preview tooling
 .claude/
@@ -18,3 +20,4 @@ Website Assets/
 *.psd
 assets/Clean in MT_full/
 assets/Clean in MT_small/
+blog/*.docx
