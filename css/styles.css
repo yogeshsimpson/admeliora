@@ -299,7 +299,7 @@ em { font-style: italic; }
 .definition-body { font-size: 0.98rem; line-height: 1.65; color: var(--ink-soft); }
 .definition-body + .definition-body { margin-top: 1rem; }
 
-.prose h2 { margin-bottom: 1.2rem; }
+.prose h2 { font-size: 2rem; margin-top: 3rem; margin-bottom: 1.2rem; }
 .prose p + p { margin-top: 1.15rem; }
 .prose p { color: var(--ink); }
 .prose .big-line { font-family: var(--font-display); font-size: clamp(1.4rem,2.6vw,2rem); line-height: 1.25; color: var(--ink); margin-block: 1.4rem; }
